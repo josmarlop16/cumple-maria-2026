@@ -30,9 +30,11 @@
     .hero { min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:1;text-align:center;padding:2rem;overflow:hidden; }
     .hero::before { content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(201,169,110,.12) 0%,transparent 70%); }
     .hero-date { font-family:'Caveat',cursive;font-size:clamp(1rem,2vw,1.3rem);color:var(--gold);letter-spacing:.2em;margin-bottom:2rem;opacity:0;animation:fadeUp 1s ease .3s forwards; }
-    .hero-title { font-size:clamp(3.5rem,12vw,10rem);font-weight:300;line-height:.9;letter-spacing:-.02em;opacity:0;animation:fadeUp 1.2s ease .6s forwards; }
+    .hero-title { font-weight:300;line-height:1;letter-spacing:-.02em;opacity:0;animation:fadeUp 1.2s ease .6s forwards; }
+    .hero-title .top-line { display:block;font-size:clamp(2rem,5vw,4.5rem);margin-bottom:.2em; }
     .hero-title .italic { font-style:italic;color:var(--gold-dark); }
-    .hero-title .name { display:block;font-size:clamp(5rem,18vw,15rem);font-weight:600;background:linear-gradient(135deg,var(--gold-dark) 0%,var(--gold) 40%,var(--gold-light) 60%,var(--gold-dark) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+    .hero-title .cumple { font-style:normal;color:var(--dark); }
+    .hero-title .name { display:block;font-size:clamp(4rem,13vw,10rem);font-weight:600;line-height:.95;background:linear-gradient(135deg,var(--gold-dark) 0%,var(--gold) 40%,var(--gold-light) 60%,var(--gold-dark) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
     .hero-subtitle { font-family:'Caveat',cursive;font-size:clamp(1.2rem,3vw,1.8rem);color:var(--text-muted);margin-top:2rem;opacity:0;animation:fadeUp 1s ease 1s forwards; }
     .pi-counter { display:flex;align-items:center;gap:1rem;margin:1rem 0;opacity:0;animation:fadeUp 1s ease 1.1s forwards; }
     .pi-label { font-family:'Caveat',cursive;font-size:1.1rem;color:var(--text-muted); }
@@ -204,7 +206,7 @@
   <div class="deco-line-right"></div>
   <p class="hero-date">✦ 21 · 09 · 2018 → para siempre ✦</p>
   <h1 class="hero-title">
-    <span class="italic">Feliz</span>
+    <span class="top-line"><span class="italic">Feliz</span> <span class="cumple">Cumpleaños</span></span>
     <span class="name">Maria</span>
   </h1>
   <p class="hero-subtitle">hoy es todo tuyo 🤍</p>
@@ -221,12 +223,12 @@
 <div class="gallery-strip">
   <div class="gallery-track" id="galleryTrack">
     <div class="gallery-thumb"><img src="fotos/primera_feria.jpg" alt="Primera feria"></div>
-    <div class="gallery-thumb"><img src="fotos/feria_hace2años.jpg" alt="Feria"></div>
+    <div class="gallery-thumb"><img src="fotos/feria_hace2anos.jpg" alt="Feria"></div>
     <div class="gallery-thumb"><img src="fotos/feria_vacilando.jpg" alt="Feria vacilando"></div>
-    <div class="gallery-thumb"><img src="fotos/feria_año_pasado.jpg" alt="Feria año pasado"></div>
+    <div class="gallery-thumb"><img src="fotos/feria_ano_pasado.jpg" alt="Feria año pasado"></div>
     <div class="gallery-thumb"><img src="fotos/primera_foto_juntos.jpg" alt="Primera foto"></div>
     <div class="gallery-thumb"><img src="fotos/boda_primo_reciente.jpg" alt="Boda primo"></div>
-    <div class="gallery-thumb"><img src="fotos/boda_primo_1año.jpg" alt="Boda primo"></div>
+    <div class="gallery-thumb"><img src="fotos/boda_primo_1ano.jpg" alt="Boda primo"></div>
     <div class="gallery-thumb"><img src="fotos/graduacion.jpg" alt="Graduación"></div>
     <div class="gallery-thumb"><img src="fotos/viaje_granada.jpg" alt="Granada"></div>
     <div class="gallery-thumb"><img src="fotos/san_juan_almeria.jpg" alt="San Juan"></div>
@@ -234,12 +236,12 @@
     <div class="gallery-thumb"><img src="fotos/juan_davila_enero.jpg" alt="Juan Dávila"></div>
     <!-- duplicar para loop continuo -->
     <div class="gallery-thumb"><img src="fotos/primera_feria.jpg" alt="Primera feria"></div>
-    <div class="gallery-thumb"><img src="fotos/feria_hace2años.jpg" alt="Feria"></div>
+    <div class="gallery-thumb"><img src="fotos/feria_hace2anos.jpg" alt="Feria"></div>
     <div class="gallery-thumb"><img src="fotos/feria_vacilando.jpg" alt="Feria vacilando"></div>
-    <div class="gallery-thumb"><img src="fotos/feria_año_pasado.jpg" alt="Feria año pasado"></div>
+    <div class="gallery-thumb"><img src="fotos/feria_ano_pasado.jpg" alt="Feria año pasado"></div>
     <div class="gallery-thumb"><img src="fotos/primera_foto_juntos.jpg" alt="Primera foto"></div>
     <div class="gallery-thumb"><img src="fotos/boda_primo_reciente.jpg" alt="Boda primo"></div>
-    <div class="gallery-thumb"><img src="fotos/boda_primo_1año.jpg" alt="Boda primo"></div>
+    <div class="gallery-thumb"><img src="fotos/boda_primo_1ano.jpg" alt="Boda primo"></div>
     <div class="gallery-thumb"><img src="fotos/graduacion.jpg" alt="Graduación"></div>
     <div class="gallery-thumb"><img src="fotos/viaje_granada.jpg" alt="Granada"></div>
     <div class="gallery-thumb"><img src="fotos/san_juan_almeria.jpg" alt="San Juan"></div>
@@ -364,7 +366,7 @@
     <h2 class="section-title">Siete años de<br><em>fotos imposibles</em></h2>
   </div>
   <div class="mosaic reveal">
-    <div class="mosaic-item m1"><img src="fotos/feria_hace2años.jpg" alt="Feria de Sevilla"></div>
+    <div class="mosaic-item m1"><img src="fotos/feria_hace2anos.jpg" alt="Feria de Sevilla"></div>
     <div class="mosaic-item m2"><img src="fotos/boda_primo_reciente.jpg" alt="Boda reciente"></div>
     <div class="mosaic-item m3"><img src="fotos/feria_vacilando.jpg" alt="Feria vacilando"></div>
     <div class="mosaic-item m4"><img src="fotos/disfrazados.jpg" alt="Disfrazados"></div>
